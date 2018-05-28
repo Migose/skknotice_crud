@@ -1,0 +1,12 @@
+<div style="text-align:center;">
+    <div><%= @note.id %>번째 글입니다.</div><br><br>
+    <div style="margin: 0 auto; border: 1px solid black; width:300px;">
+        제목 : <%= @note.title %> <br>
+        내용 : <%= @note.content %>
+    </div>
+    <div>
+        <a class="link_icon" href="/notes">목록으로 가기</a>
+        <a class="link_icon" href="/notes/edit/<%= @note.id %>">수정하기</a>
+        <a class="link_icon" href="/notes/<%= @note.id %>" data-confirm="정말루? 진짜루?" data-method="delete">삭제하기</a>
+    </div>
+</div>

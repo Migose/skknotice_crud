@@ -1,0 +1,9 @@
+<h1 style="text-align:center;">공지</h1>
+<div style="text-align:center; margin-top: 150px;"> 
+    <form action="/notes" method="post">
+        <input name= "authenticity_token" type= "hidden" value= <%= @token %>></input>
+        <input name="note_title" type="text" placeholder="제목을 입력하세요"> </input><br>
+        <input name="note_content" type="text" placeholder="내용을 입력하세요"> </input><br><br>
+        <input type="submit"></input>
+    </form>
+</div>

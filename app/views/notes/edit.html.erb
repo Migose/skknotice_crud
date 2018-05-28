@@ -1,0 +1,8 @@
+<form action="/notes" method="post">
+    <input type= "hidden" name= "_method" value="patch"></input>
+    <input name= "authenticity_token" type= "hidden" value= <%= @token %>></input>
+    <input name="note_id" type="hidden" value="<%= @note.id%>"> </input>
+    <input name="note_title" type="text" value="<%= @note.title%>"> </input>
+    <input name="note_content" type="text" value="<%= @note.content%>"> </input>
+    <input type="submit"></input>
+</form>

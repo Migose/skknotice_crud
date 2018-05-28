@@ -1,0 +1,22 @@
+<h1 style="text-align:center;">게시판</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="table_head">번호</th>
+            <th class="table_head">제목</th>
+            <th class="table_head">시간</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @notes.each do |note| %>
+            <tr>
+                <td class="table_body" style="text-align:center;"><%= note.id %></td>
+                <td class="table_body"><a href="notes/<%= note.id %>"><%= note.title %></a></td>
+                <td class="table_body"><%= note.updated_at %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+<br>
+<br>
+<div class="navigator"><a class="link_icon" href="notes/new">새 글 쓰러가기</a></div>
